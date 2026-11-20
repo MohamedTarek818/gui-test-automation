@@ -2,9 +2,6 @@ package com.automation.driver;
 
 import org.openqa.selenium.WebDriver;
 
-/**
- * Holds one WebDriver per thread so the framework is safe for parallel execution.
- */
 public final class DriverManager {
 
     private static final ThreadLocal<WebDriver> DRIVER = new ThreadLocal<>();

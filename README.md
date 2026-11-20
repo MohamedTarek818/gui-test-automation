@@ -16,7 +16,7 @@ Selenium WebDriver + TestNG + Cucumber (BDD) + Maven, written in Java 17.
 - **No hard-coded values** – URL, browser, timeouts, test-data folder in `config.properties`; file names / expected messages in the feature `Examples` table; test files in `src/test/resources/testdata`.
 - **Synchronization** – explicit waits only (`WebDriverWait` + `ExpectedConditions`), no `Thread.sleep`, no implicit wait.
 - **Thread-safe driver** – `DriverManager` (ThreadLocal) + `DriverFactory` (Chrome / Firefox / Edge, headless option).
-- **Reporting** – HTML + JSON Cucumber reports; screenshot attached to the report on failure.
+
 
 ## Project structure
 ```

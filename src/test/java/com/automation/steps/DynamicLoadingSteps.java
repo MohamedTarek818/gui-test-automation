@@ -1,9 +1,8 @@
 package com.automation.steps;
 
 import com.automation.context.TestContext;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 import org.testng.Assert;
 
 public class DynamicLoadingSteps {
@@ -19,17 +18,17 @@ public class DynamicLoadingSteps {
         context.setDynamicLoadingPage(context.homePage().openDynamicLoading());
     }
 
-    @And("the user opens Example {int}")
+    @When("the user opens Example {int}")
     public void theUserOpensExample(int exampleNumber) {
         context.setDynamicLoadingExamplePage(context.dynamicLoadingPage().openExample(exampleNumber));
     }
 
-    @And("the user clicks the Start button")
+    @When("the user clicks the Start button")
     public void theUserClicksTheStartButton() {
         context.dynamicLoadingExamplePage().clickStart();
     }
 
-    @And("the user waits for the loading to finish")
+    @When("the user waits for the loading to finish")
     public void theUserWaitsForTheLoadingToFinish() {
         context.dynamicLoadingExamplePage().waitForLoadingToFinish();
     }

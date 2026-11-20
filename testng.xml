@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="GUI Automation Suite">
-    <test name="Cucumber BDD Scenarios">
+    <test name="Task Scenarios">
         <classes>
             <class name="com.automation.runners.TestRunner"/>
         </classes>

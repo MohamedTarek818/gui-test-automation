@@ -9,10 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-/**
- * Shared page behaviour: explicit waits and common element actions.
- * Every page object extends this class so synchronization logic is never duplicated.
- */
 public abstract class BasePage {
 
     protected final WebDriver driver;

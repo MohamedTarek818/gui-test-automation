@@ -1,8 +1,6 @@
 @dynamic
 Feature: Dynamic Loading
-  As a user of the-internet application
-  I want to wait for dynamically rendered content
-  So that I can verify it is displayed once loading finishes
+
 
   Scenario: Element rendered after the fact (Example 2)
     Given the user is on the home page

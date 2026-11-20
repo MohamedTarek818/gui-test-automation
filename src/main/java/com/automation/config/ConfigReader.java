@@ -4,10 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/**
- * Reads framework configuration from config.properties.
- * Any value can be overridden from the command line, e.g. -Dbrowser=firefox.
- */
 public final class ConfigReader {
 
     private static final String CONFIG_FILE = "config.properties";

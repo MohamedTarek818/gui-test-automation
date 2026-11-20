@@ -7,10 +7,6 @@ import com.automation.pages.FileUploadPage;
 import com.automation.pages.HomePage;
 import com.automation.pages.UploadResultPage;
 
-/**
- * Shares page objects between step-definition classes within one scenario.
- * Instances are created per scenario by Cucumber's PicoContainer (dependency injection).
- */
 public class TestContext {
 
     private HomePage homePage;

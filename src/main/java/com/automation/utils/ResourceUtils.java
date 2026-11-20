@@ -4,18 +4,11 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
 
-/**
- * Helpers for locating files on the classpath (e.g. test data).
- */
 public final class ResourceUtils {
 
     private ResourceUtils() {
     }
 
-    /**
-     * @param classpathLocation path relative to the classpath root, e.g. "testdata/sample-image.png"
-     * @return absolute file-system path of the resource
-     */
     public static String getAbsolutePath(String classpathLocation) {
         URL url = ResourceUtils.class.getClassLoader().getResource(classpathLocation);
         if (url == null) {

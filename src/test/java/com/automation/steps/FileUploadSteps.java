@@ -3,7 +3,6 @@ package com.automation.steps;
 import com.automation.config.ConfigReader;
 import com.automation.context.TestContext;
 import com.automation.utils.ResourceUtils;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
@@ -21,13 +20,13 @@ public class FileUploadSteps {
         context.setFileUploadPage(context.homePage().openFileUpload());
     }
 
-    @And("the user selects the file {string}")
+    @When("the user selects the file {string}")
     public void theUserSelectsTheFile(String fileName) {
         String path = ResourceUtils.getAbsolutePath(ConfigReader.get("test.data.dir") + fileName);
         context.fileUploadPage().selectFile(path);
     }
 
-    @And("the user submits the file")
+    @When("the user submits the file")
     public void theUserSubmitsTheFile() {
         context.setUploadResultPage(context.fileUploadPage().submit());
     }
@@ -38,7 +37,7 @@ public class FileUploadSteps {
                 "Upload confirmation message mismatch");
     }
 
-    @And("the uploaded file name should be {string}")
+    @When("the uploaded file name should be {string}")
     public void theUploadedFileNameShouldBe(String expectedFileName) {
         Assert.assertEquals(context.uploadResultPage().getUploadedFileName(), expectedFileName,
                 "Uploaded file name mismatch");
