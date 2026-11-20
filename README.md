@@ -7,7 +7,8 @@ Selenium WebDriver + TestNG + Cucumber (BDD) + Maven, written in Java 17.
 |---|---|
 | File Upload | Home → File Upload → choose image → Upload → verify "File Uploaded!" and file name |
 | Dynamic Loading | Home → Dynamic Loading → Example 2 → Start → wait for loading → verify "Hello World!" |
-
+## run the code:
+from TestRunner.java espically first run
 ## Tech & design
 - **Page Object Model** – one class per page (`src/main/java/com/automation/pages`), shared waits/actions in `BasePage`.
 - **Fluent API** – page methods return the next page (or `this`), e.g. `homePage.openFileUpload().selectFile(path).submit()`.
